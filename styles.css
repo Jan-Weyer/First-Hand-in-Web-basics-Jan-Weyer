@@ -1,0 +1,134 @@
+/* Default styles for all screen sizes */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background: url(/calisthenics_gym_1.jpeg); /* I could not get this to work after one hour of trying*/
+    position: relative;
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.sidebar a {
+    text-decoration: underline;
+
+    color: white;
+    font-weight: bold;
+}
+
+.menu-content a:hover {
+    text-decoration: underline;
+}
+
+.burger-menu {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+    z-index: 999;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.menu-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.menu-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-content li {
+    margin-bottom: 10px;
+}
+
+.menu-content a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.menu-content a:hover {
+    text-decoration: underline;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust spacing */
+}
+
+.event-button,
+.create-event-button,
+.my-events-button {
+    padding: 15px 30px; /* Adjust padding */
+    font-size: 18px; /* Adjust font size */
+    margin: 0 20px; /* Adjust margin between buttons */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-button,
+    .create-event-button,
+    .my-events-button {
+        margin: 10px 0; /* Adjust margin between buttons */
+    }
+}
+
+/* Media query for even smaller screens */
+@media (max-width: 480px) {
+    .burger-menu {
+        top: 5px;
+        left: 5px;
+    }
+}
